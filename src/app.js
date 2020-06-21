@@ -47,13 +47,12 @@ const getRandomStrength = () => {
 }
 
 const buildPlayers = (players, type) => {
-    let fragment = '';
-
+    let fragment = [];
     // Loop through players and accumulate HTML template
     // depending of type of player(hero|villain)
     // Type your code here
     for (let i = 0; i < players.length; i++) {
-        player = `<div class="player">
+        let player = `<div class="player">
     <img src="${players[i].image}">
     <div class="name">${players[i].name}</div>
     <div class="strength">${players[i].strength}</div>
@@ -62,9 +61,9 @@ const buildPlayers = (players, type) => {
             fragment = fragment + player;
         }
     }
-
     return fragment;
 }
+
 // Display players in HTML
 const viewPlayers = (players) => {
 
