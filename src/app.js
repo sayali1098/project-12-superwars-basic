@@ -53,10 +53,10 @@ const buildPlayers = (players, type) => {
     // Type your code here
     for (let i = 0; i < players.length; i++) {
         let player = `<div class="player">
-    <img src="${players[i].image}">
+    <img src="${players[i].image}" alt="">
     <div class="name">${players[i].name}</div>
     <div class="strength">${players[i].strength}</div>
-</div>`
+    </div>`
         if (players[i].type == type) {
             fragment = fragment + player;
         }
